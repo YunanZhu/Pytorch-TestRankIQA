@@ -9,7 +9,7 @@
 * Pandas 1.1.1 (Just use it to [save the predictive scores](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/main.py#L75), so it is not necessary)
 * Opencv 4.5
 
-The above version is not mandatory, just because I ran the code in such an environment.
+The above versions are not mandatory, just because I ran the code in such an environment.
 
 ## Getting Started
 ```
@@ -25,9 +25,12 @@ Note: ```test_set``` is the dataset folder, ```model_file``` is the pre-trained 
 I use [caffemodel2pytorch](https://github.com/vadimkantorov/caffemodel2pytorch) to transform the [Caffe](http://caffe.berkeleyvision.org/) model file to Pytorch format.
 You can find the pre-trained Caffe model files of RankIQA in [here](https://github.com/xialeiliu/RankIQA/tree/master/pre-trained).
 
-**You can also download the pytorch model files transformed by myself from [here](https://share.weiyun.com/3RpfjZKJ), and the password is ```jpbe8i```.**
+**You can also download the Pytorch model files transformed by myself from [here](https://share.weiyun.com/3RpfjZKJ), and the password is ```jpbe8i```.**
 
 ## Tips
-**I cannot guarantee the correctness of the pre-trained pytorch model files and the test results.**  
-I just tried to reproduce the results showed in the [paper](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html).  
-You can see the reproduced results on [TID2013](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20LIVE.xlsx) and [LIVE](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20TID2013.xlsx)
+**I cannot guarantee the correctness of the pre-trained pytorch model files and the test results.**
+
+I just tried to reproduce the results showed in the [paper](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html),
+and you can see the reproduced results on [TID2013](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20LIVE.xlsx) and [LIVE](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20TID2013.xlsx).
+
+I didn't write the training code. If you are familiar with Pytorch, you can modify the code and test rankiqa on other datasets.
