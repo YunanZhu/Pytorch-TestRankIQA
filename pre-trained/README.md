@@ -1,1 +1,1 @@
-Put the pre-trained pytorch model files in the folder.
+**Put the pre-trained pytorch model files in this folder.**
