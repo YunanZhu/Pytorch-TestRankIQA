@@ -12,13 +12,20 @@
 The above version is not mandatory, just because I ran the code in such an environment.
 
 ## Getting Started
-`Python main.py --test_set "ur_path/TID2013/" --model_file "./pre-trained/FT_tid2013.caffemodel.pt" --test_file "./data/ft_tid2013_test.txt" --res_file "./result.csv"`
+```
+python main.py --test_set "ur_path/TID2013/" --model_file "./pre-trained/Rank_tid2013.caffemodel.pt" --test_file "./data/ft_tid2013_test.txt" --res_file "./result.csv"
+python main.py --test_set "ur_path/TID2013/" --model_file "./pre-trained/FT_tid2013.caffemodel.pt" --test_file "./data/ft_tid2013_test.txt" --res_file "./result.csv"
+
+python main.py --test_set "ur_path/LIVE2/" --model_file "./pre-trained/Rank_live.caffemodel.pt" --test_file "./data/ft_live_test.txt" --res_file "./result.csv"
+python main.py --test_set "ur_path/LIVE2/" --model_file "./pre-trained/FT_live.caffemodel.pt" --test_file "./data/ft_live_test.txt" --res_file "./result.csv"
+```
+Note: ```test_set``` is the dataset folder, ```model_file``` is the pre-trained model file, ```test_file``` is the txt file which contains MOS and image filenames (see [here](https://github.com/xialeiliu/RankIQA/tree/master/data)), ```res_file``` is the csv file to save the test results.
 
 ## About the pre-trained model files
 I use [caffemodel2pytorch](https://github.com/vadimkantorov/caffemodel2pytorch) to transform the [Caffe](http://caffe.berkeleyvision.org/) model file to Pytorch format.
 You can find the pre-trained Caffe model files of RankIQA in [here](https://github.com/xialeiliu/RankIQA/tree/master/pre-trained).
 
 ## Tips
-I cannot guarantee the correctness of the pre-trained pytorch model files.  
+**I cannot guarantee the correctness of the pre-trained pytorch model files and the test results.**  
 I just tried to reproduce the results showed in the [paper](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html).  
-You can see the reproduced results of [TID2013](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20LIVE.xlsx) and [LIVE](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20TID2013.xlsx)
+You can see the reproduced results on [TID2013](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20LIVE.xlsx) and [LIVE](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20TID2013.xlsx)
