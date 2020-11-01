@@ -28,7 +28,7 @@ You can find the pre-trained Caffe model files of RankIQA in [here](https://gith
 **You can also download the Pytorch model files transformed by myself from [here](https://share.weiyun.com/3RpfjZKJ), and the password is ```jpbe8i```.**
 
 ## Tips
-**I cannot guarantee the correctness of the pre-trained pytorch model files and the test results.**
+**I cannot guarantee the correctness of the pre-trained Pytorch model files and the test results.**
 
 I just tried to reproduce the results showed in the [paper](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html),
 and you can see the reproduced results on [TID2013](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20LIVE.xlsx) and [LIVE](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20TID2013.xlsx).
