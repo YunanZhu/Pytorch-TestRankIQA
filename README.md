@@ -1,5 +1,5 @@
 # Pytorch-TestRankIQA
-RankIQA was proposed by a ICCV2017 paper by [Liu X](https://github.com/xialeiliu). You can get this paper from [arXiv pre-print version](https://arxiv.org/abs/1707.08347v1) or [ICCV 2017 open access](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html).
+RankIQA was proposed in a ICCV2017 paper by [Liu X](https://github.com/xialeiliu). You can get this paper from [arXiv](https://arxiv.org/abs/1707.08347v1) or [ICCV 2017 open access](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html).
 
 This repo contains [RankIQA](https://github.com/xialeiliu/RankIQA) model files in Pytorch. And you can test RankIQA on TID2013 and LIVE dataset in Pytorch.
 
