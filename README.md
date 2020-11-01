@@ -1,5 +1,7 @@
 # Pytorch-TestRankIQA
-[RankIQA](https://github.com/xialeiliu/RankIQA) model files in Pytorch. Test [RankIQA](https://github.com/xialeiliu/RankIQA) on TID2013 or LIVE dataset in Pytorch.
+RankIQA was proposed by a ICCV2017 paper by [Liu X](https://github.com/xialeiliu). You can get this paper from [arXiv pre-print version](https://arxiv.org/abs/1707.08347v1) or [ICCV 2017 open access](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html).
+
+This repo contains [RankIQA](https://github.com/xialeiliu/RankIQA) model files in Pytorch. And you can test RankIQA on TID2013 and LIVE dataset in Pytorch.
 
 ## Prerequisites
 * Win10 (Not tested on Ubuntu yet)
@@ -25,10 +27,10 @@ Note: ```test_set``` is the dataset folder, ```model_file``` is the pre-trained 
 I use [caffemodel2pytorch](https://github.com/vadimkantorov/caffemodel2pytorch) to transform the [Caffe](http://caffe.berkeleyvision.org/) model file to Pytorch format.
 You can find the pre-trained Caffe model files of RankIQA in [here](https://github.com/xialeiliu/RankIQA/tree/master/pre-trained).
 
-**You can also download the Pytorch model files transformed by myself from [here](https://share.weiyun.com/3RpfjZKJ), and the password is ```jpbe8i```.**
+***You can also download the Pytorch model files transformed by myself from [here](https://share.weiyun.com/3RpfjZKJ), and the password is ```jpbe8i```.***
 
 ## Tips
-**I cannot guarantee the correctness of the pre-trained Pytorch model files and the test results.**
+***I cannot guarantee the correctness of the pre-trained Pytorch model files and the test results.***
 
 I just tried to reproduce the results showed in the [paper](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html),
 and you can see the reproduced results on [TID2013](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20LIVE.xlsx) and [LIVE](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20TID2013.xlsx).
