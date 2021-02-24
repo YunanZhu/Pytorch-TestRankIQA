@@ -27,7 +27,10 @@ Note: ```test_set``` is the dataset folder, ```model_file``` is the pre-trained 
 I use [caffemodel2pytorch](https://github.com/vadimkantorov/caffemodel2pytorch) to transform the [Caffe](http://caffe.berkeleyvision.org/) model file to Pytorch format.
 You can find the pre-trained Caffe model files of RankIQA in [here](https://github.com/xialeiliu/RankIQA/tree/master/pre-trained).
 
-***You can also download the Pytorch model files transformed by myself from [here](https://share.weiyun.com/3RpfjZKJ), and the password is ```jpbe8i```.***
+***You can also download the Pytorch model files transformed by myself from...***
+
+- ***[Tencent Weiyun](https://share.weiyun.com/3RpfjZKJ), and the password is ```jpbe8i```.***
+- ***[Google drive](https://drive.google.com/drive/folders/1OQ0IQrWoricMhaIyfwqsJVlYpXHKPP1z).***
 
 ## Tips
 ***I cannot guarantee the correctness of the pre-trained Pytorch model files and the test results.***
