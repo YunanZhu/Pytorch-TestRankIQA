@@ -38,4 +38,4 @@ You can find the pre-trained Caffe model files of RankIQA in [here](https://gith
 I just tried to reproduce the results showed in the [paper](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html),
 and you can see the reproduced results on [TID2013](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20LIVE.xlsx) and [LIVE](https://github.com/YunanZhu/Pytorch-TestRankIQA/blob/main/results%20of%20RankIQA%20on%20TID2013.xlsx).
 
-I didn't write the training code. If you are familiar with Pytorch, you can modify the code and test rankiqa on other datasets.
+I didn't write the training code. If you are familiar with Pytorch, you can modify the code and test RankIQA on other datasets.
