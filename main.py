@@ -4,7 +4,6 @@ import collections
 
 import cv2
 import numpy as np
-import pandas as pd
 
 import torch
 from torch.utils.data import DataLoader
@@ -16,6 +15,9 @@ from utils import *
 
 def main(opt):
     print(opt)
+
+    # Set the random seed for reproducing.
+    np.random.seed(1)
 
     # Check GPU state.
     use_cuda = torch.cuda.is_available()
@@ -39,8 +41,7 @@ def main(opt):
 
     # Start to test.
     Num_Image = len(files)
-    Num_Patch = 30  # random crop patches "Num_Patch" times
-    feat = np.zeros(shape=[Num_Image, Num_Patch])
+    Num_Patch = 30  # Randomly crop patches "Num_Patch" times.
     pred = np.zeros(shape=Num_Image)
     medn = np.zeros(shape=Num_Image)
     with torch.no_grad():
@@ -51,28 +52,33 @@ def main(opt):
             x, y = img.shape[0], img.shape[1]
 
             # Crop patches & calculate pred scores.
+            patch_list = []
             for j in range(Num_Patch):
                 x_p = np.random.randint(x - 224)
                 y_p = np.random.randint(y - 224)
-                patch = img[x_p:(x_p + 224), y_p:(y_p + 224), :].transpose([2, 0, 1])
-                patch = torch.from_numpy(patch).unsqueeze(dim=0).float().to(device)
-                # this network can only accept size(224x224) patch
-                score = net(patch)
+                patch = img[x_p:(x_p + 224), y_p:(y_p + 224), :]
+                patch = torch.from_numpy(patch).permute(2, 0, 1).unsqueeze(dim=0).float().to(device)
+                patch_list.append(patch)
 
-                feat[i, j] = score.item()
-                pred[i] += score.item()
+            patches = torch.cat(patch_list, dim=0)
 
-            pred[i] /= Num_Patch  # average
-            medn[i] = np.median(feat[i, :])
+            # This network can only accept size(224x224) patch.
+            score = net(patches)
+
+            pred[i] = torch.mean(score).item()
+            medn[i] = torch.median(score).item()
 
             print(f"{i}: {opt.test_set + files[i]} | {pred[i]} | {medn[i]}")
 
     PLCC = plcc(pred, mos)
     SROCC = srocc(pred, mos)
-    print(f"PLCC = {PLCC}, SROCC = {SROCC}")
+    print(f"PLCC = {PLCC:.4f}, SROCC = {SROCC:.4f}")
 
-    if opt.res_file is not None:
-        pd.DataFrame(data=[np.asarray(files), mos, pred, medn]).to_csv(opt.res_file, encoding='gbk')
+    if (opt.res_file is not None) and (opt.res_file.lower() != "none"):
+        with open(opt.res_file, mode='w') as f:
+            print(f"img_file,mos,pred,plcc,{PLCC:.4f},srcc,{SROCC:.4f}", file=f)
+            for (im, gt, pd) in zip(files, mos, pred):
+                print(f"{im},{gt},{pd}", file=f)
 
 
 if __name__ == '__main__':

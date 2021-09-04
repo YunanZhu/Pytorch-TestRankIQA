@@ -59,7 +59,7 @@ class Vgg16(nn.Module):
 
     def forward(self, x):
         out = self.features(x)
-        out = torch.flatten(out)  # dont use adaptive avg pooling
+        out = torch.flatten(out, start_dim=1, end_dim=-1)  # dont use adaptive avg pooling
         out = self.classifier(out)
         return out
 
