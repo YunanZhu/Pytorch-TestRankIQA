@@ -7,7 +7,8 @@ If you just want to have a quick and simple comparison with RankIQA on your own 
 
 ## News
 - We have released our recent work [RecycleD](https://github.com/YunanZhu/RecycleD). It has been accepted to *[ACM MM 2021 brave new ideas](https://2021.acmmm.org/brave-new-ideas-proposals)*.  
-  It is an opinion-unaware non-reference IQA method which is based on the pre-trained discriminator of WGAN.
+  It is an opinion-unaware non-reference IQA method which is based on the pre-trained discriminator of WGAN.  
+  It may interest you if you are trying to use or study RankIQA.  
 
 ## Prerequisites
 * Win10 (Not tested on Ubuntu yet)
