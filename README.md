@@ -5,6 +5,10 @@ This repo contains [RankIQA](https://github.com/xialeiliu/RankIQA) model files i
 You can use it to test RankIQA on TID2013 and LIVE dataset in Pytorch.  
 If you just want to have a quick and simple comparison with RankIQA on your own test set, this repo is suited for you.
 
+## News
+- We have released our recent work [RecycleD](https://github.com/YunanZhu/RecycleD). It has been accepted to *[ACM MM 2021 brave new ideas](https://2021.acmmm.org/brave-new-ideas-proposals)*.  
+  It is an opinion-unaware non-reference IQA method which is based on the pre-trained discriminator of WGAN.
+
 ## Prerequisites
 * Win10 (Not tested on Ubuntu yet)
 * Python 3.6
