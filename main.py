@@ -51,7 +51,7 @@ def main(opt):
             img = np.asarray(img)
             x, y = img.shape[0], img.shape[1]
 
-            # Crop patches & calculate pred scores.
+            # Crop patches.
             patch_list = []
             for j in range(Num_Patch):
                 x_p = np.random.randint(x - 224)
@@ -60,10 +60,11 @@ def main(opt):
                 patch = torch.from_numpy(patch).permute(2, 0, 1).unsqueeze(dim=0).float().to(device)
                 patch_list.append(patch)
 
+            # Concat patches at batch_size dim.
             patches = torch.cat(patch_list, dim=0)
 
-            # This network can only accept size(224x224) patch.
-            score = net(patches)
+            # Get the pred scores.
+            score = net(patches)  # This network can only accept size(224x224) patch.
 
             pred[i] = torch.mean(score).item()
             medn[i] = torch.median(score).item()
