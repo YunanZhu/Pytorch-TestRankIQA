@@ -1,7 +1,9 @@
 # Pytorch-TestRankIQA
-RankIQA was proposed in a ICCV2017 paper by [Liu X](https://github.com/xialeiliu). You can get this paper from [arXiv](https://arxiv.org/abs/1707.08347v1) or [ICCV 2017 open access](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html).
+RankIQA was proposed in a ICCV2017 paper by [Liu X](https://github.com/xialeiliu). You can get this paper from [arXiv](https://arxiv.org/abs/1707.08347) or [ICCV 2017 open access](https://openaccess.thecvf.com/content_iccv_2017/html/Liu_RankIQA_Learning_From_ICCV_2017_paper.html).
 
-This repo contains [RankIQA](https://github.com/xialeiliu/RankIQA) model files in Pytorch. And you can test RankIQA on TID2013 and LIVE dataset in Pytorch.
+This repo contains [RankIQA](https://github.com/xialeiliu/RankIQA) model files in Pytorch.  
+You can use it to test RankIQA on TID2013 and LIVE dataset in Pytorch.  
+If you just want to have a quick and simple comparison with RankIQA on your own test set, this repo is suited for you.
 
 ## Prerequisites
 * Win10 (Not tested on Ubuntu yet)
@@ -30,6 +32,9 @@ You can find the pre-trained Caffe model files of RankIQA in [here](https://gith
 
 - ***[Baidu disk](https://pan.baidu.com/s/1HjYFypg-RWE-W-TvNQ-02A), and the password is ```riqa```.***
 - ***[Google drive](https://drive.google.com/drive/folders/1OQ0IQrWoricMhaIyfwqsJVlYpXHKPP1z).***
+
+I have used these pre-trained model files to test the performance on LIVE2 and TID2013.  
+The test results are recorded in [test results.xlsx](test%20results.xlsx).
 
 ## Tips
 ***I cannot guarantee the correctness of the pre-trained Pytorch model files and the test results.***
